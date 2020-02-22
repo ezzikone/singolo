@@ -1,0 +1,128 @@
+@font-face {
+    font-family: "Lato";
+    src: url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+}
+
+html {
+    font-size: 1.078436vw;
+    font-family: Lato, serif;
+}
+
+body {
+    overflow-x: hidden;
+    width: auto;
+    max-width: 100%;
+    margin: 0;
+}
+
+header {
+    height: 9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+    background: #2d303a;
+    border-bottom: .6rem solid #323746;
+}
+
+.header-logo {
+    width: 11.5rem;
+    height: 2rem;
+}
+
+.header-nav {
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 37.2rem;
+}
+
+.header-nav-li {
+    color: #494e62;
+    list-style-type: none;
+}
+
+.header-nav-li a {
+    font: 1.2em "Lato", sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.header-nav-li:first-child a {
+    color: #f06c64;
+}
+
+.header-nav-dot {
+    width: 0.35rem;
+    height: 0.35rem;
+    list-style-type: none;
+    background: #494e62;
+    border-radius: 50%;
+}
+
+.slider-singolo {
+    width: 100%;
+    height: 59.4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #f06c64;
+    border-bottom: .6rem solid #ea676b;
+}
+
+.slider-arrow-right {
+    transform: rotate(180deg);
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+}
+
+.slider-phone-vert {
+    width: 24rem;
+    height: 48.3rem;
+    margin-right: 7.3rem;
+}
+
+.slider-phone-hori {
+    width: 48.4rem;
+    height: 24rem;
+}
+
+.services-singolo {
+    height: 49.5rem;
+    background: #f2f2f2;
+    padding: 6.7rem 4rem;
+    border-bottom: .6rem solid #ffffff;
+}
+
+.services-header {
+    margin: 0 0 3.3rem 0;
+    font-size: 3rem;
+    font-weight: bolder;
+    color: #666d89;
+}
+
+.services-description {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: lighter;
+    color: #767e9e;
+    letter-spacing: -.1rem;
+    line-height: 3rem;
+}
+
+.services-items {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.item-container {
+    width: 30rem;
+    margin-right: 2rem;
+}
+
