@@ -1,10 +1,25 @@
 @font-face {
-    font-family: "Lato";
-    src: url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+    font-family: Lato-Light;
+    src: url(assets/fonts/Lato-Light.ttf);
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(assets/fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: Lato-Bold;
+    src: url(assets/fonts/Lato-Bold.ttf);
+}
+
+@font-face {
+    font-family: Lato-Black;
+    src: url(assets/fonts/Lato-Black.ttf);
 }
 
 html {
-    font-size: 1.078436vw;
+    font-size: 0.98vw;
     font-family: Lato, serif;
 }
 
@@ -20,7 +35,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 4rem;
+    padding: 0 1.7rem 0 4rem;
     background: #2d303a;
     border-bottom: .6rem solid #323746;
 }
@@ -31,10 +46,11 @@ header {
 }
 
 .header-nav {
+    padding-top: 1rem;
     display: inline-flex;
     justify-content: space-around;
     align-items: center;
-    width: 37.2rem;
+    width: 38.5rem;
 }
 
 .header-nav-li {
@@ -43,7 +59,7 @@ header {
 }
 
 .header-nav-li a {
-    font: 1.2em "Lato", sans-serif;
+    font: 1.2em "Lato-Bold", sans-serif;
     color: #FFFFFF;
     text-decoration: none;
 }
@@ -52,9 +68,13 @@ header {
     color: #f06c64;
 }
 
+.header-nav-li:hover a {
+    color: #f06c64;
+}
+
 .header-nav-dot {
-    width: 0.35rem;
-    height: 0.35rem;
+    width: .2rem;
+    height: .2rem;
     list-style-type: none;
     background: #494e62;
     border-radius: 50%;
@@ -70,11 +90,22 @@ header {
     border-bottom: .6rem solid #ea676b;
 }
 
+.slider-arrow-left {
+    position: relative;
+    bottom: 0.5rem;
+}
+
 .slider-arrow-right {
+    position: relative;
+    left: 2rem;
+    bottom: .3rem;
     transform: rotate(180deg);
 }
 
 .slider-container {
+    position: relative;
+    bottom: .4rem;
+    left: .8rem;
     display: flex;
     align-items: center;
 }
@@ -91,25 +122,25 @@ header {
 }
 
 .services-singolo {
-    height: 49.5rem;
+    height: 43.5rem;
     background: #f2f2f2;
-    padding: 6.7rem 4rem;
+    padding: 6rem 0 0 4rem;
     border-bottom: .6rem solid #ffffff;
 }
 
 .services-header {
-    margin: 0 0 3.3rem 0;
+    margin: 0 0 1.8rem 0;
     font-size: 3rem;
-    font-weight: bolder;
+    font-family: Lato-Black, serif;
     color: #666d89;
 }
 
 .services-description {
-    margin: 0;
+    margin: 0 0 4.6rem 0;
     font-size: 1.8rem;
-    font-weight: lighter;
+    font-family: Lato-Light, serif;
     color: #767e9e;
-    letter-spacing: -.1rem;
+    letter-spacing: -.02rem;
     line-height: 3rem;
 }
 
@@ -123,6 +154,33 @@ header {
 
 .item-container {
     width: 30rem;
-    margin-right: 2rem;
+    margin: 0 2rem 3.2rem 0;
 }
+
+.item-image {
+    float: left;
+    margin-right: 2rem;
+    width: 5.8rem;
+    height: 5.8rem;
+}
+
+.item-header {
+    margin: 0 0 0.6rem 0;
+    float: right;
+    width: 22.2rem;
+    font-size: 1.8rem;
+    font-family: Lato-Black, serif;
+    color: #666d89;
+}
+
+.item-description {
+    margin: 0;
+    float: right;
+    width: 22.2rem;
+    font-size: 1.2rem;
+    color: #767e9e;
+    line-height: 2.2rem;
+}
+
+
 
