@@ -93,6 +93,8 @@ header {
 .slider-arrow-left {
     position: relative;
     bottom: 0.5rem;
+    filter: alpha(Opacity=50); /* Полупрозрачность для IE */
+    opacity: 0.5; /* Полупрозрачность для других браузеров */
 }
 
 .slider-arrow-right {
@@ -100,6 +102,14 @@ header {
     left: 2rem;
     bottom: .3rem;
     transform: rotate(180deg);
+    filter: alpha(Opacity=50); /* Полупрозрачность для IE */
+    opacity: 0.5; /* Полупрозрачность для других браузеров */
+}
+
+.slider-arrow-left:hover,
+.slider-arrow-right:hover {
+    filter: alpha(Opacity=100); /* Полупрозрачность для IE */
+    opacity: 1; /* Полупрозрачность для других браузеров */
 }
 
 .slider-container {
