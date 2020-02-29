@@ -48,22 +48,22 @@ body>section>ul {
 }
 
 .singolo__portfolio {
-    height: 86.4rem;
+    height: 74.4rem;
     background: #2d303a;
     border-bottom: .6rem solid #323746;
-    padding: 6.7rem 4.1rem;
+    padding: 6rem 2.2rem 6rem 4rem;
     z-index: 1;
 }
 
 .portfolio__header {
-    margin-bottom: 3.3rem;
+    margin-bottom: 2.1rem;
     font-family: Lato-Black, serif;
     font-size: 3rem;
     color: #484c5f;
 }
 
 .portfolio__description {
-    margin-bottom: 1rem;
+    margin-bottom: 1.6rem;
     font-family: Lato-Light, serif;
     font-size: 1.8rem;
     color: #767e9e;
@@ -71,7 +71,7 @@ body>section>ul {
 
 .portfolio__topics {
     height: 2.2rem;
-    width: 28.7rem;
+    width: 28.9rem;
     display: inline-flex;
     justify-content: space-between;
     padding: 0;
@@ -88,12 +88,17 @@ body>section>ul {
 }
 
 .potfolio__topics_item:first-child {
-    color: #c5c5c5;
     border-color: #c5c5c5;
 }
 
-.potfolio__topics_item>p {
+.potfolio__topics_item:first-child>a {
+    color: #c5c5c5;
+}
+
+.potfolio__topics_item>a {
+    text-decoration: none;
     font-family: Lato, serif;
+    color: #666d89;
     font-size: 1.2rem;
 }
 
@@ -106,8 +111,12 @@ body>section>ul {
     margin-top: 1rem;
 }
 
-.portfolio__item {
-    margin: 1rem 0;
+.portfolio__item{
+    margin: 0.9rem 0;
+}
+
+.portfolio__item:nth-child(n+13) {
+    display: none;
 }
 
 .portfolio__item>img {
@@ -116,25 +125,26 @@ body>section>ul {
 }
 
 .singolo__about {
-    height: 72.8rem;
+    height: 61.5rem;
     background: #f2f2f2;
     border-bottom: .6rem solid #ffffff;
-    padding: 6.6rem 4rem;
+    padding: 5.8rem 2.4rem 5.8rem 4rem;
     z-index: 1;
 }
 
 .about__header {
-    margin-bottom: 3.3rem;
+    margin-bottom: 2rem;
     font-family: Lato-Black, serif;
     font-size: 3rem;
     color: #666d89;
 }
 
 .about__description {
-    margin-bottom: 4rem;
+    margin-bottom: 4.5rem;
     font-family: Lato-Light, serif;
     font-size: 1.8rem;
     color: #767e9e;
+    line-height: 3rem;
 }
 
 .about__container {
@@ -159,14 +169,16 @@ body>section>ul {
     font-family: Lato-Black, serif;
     font-size: 1.8rem;
     color: #666d89;
-    margin: 1.7rem 0;
+    margin: 1.5rem 0;
 }
 
 .about__container_item>p {
     font-family: Lato, serif;
     font-size: 1.2rem;
     color: #767e9e;
-    margin-bottom: 2rem;
+    margin-bottom: 2.2rem;
+    margin-top: -0.5rem;
+    line-height: 2rem;
 }
 
 .item__social {
@@ -177,5 +189,17 @@ body>section>ul {
 .item__social>img {
     width: 3.2rem;
     height: 3.2rem;
-    margin: .8rem;
+    margin: .4rem;
+}
+
+.item__social>img:first-child {
+    margin-left: 0;
+}
+
+.potfolio__topics_item:hover {
+    border-color: #c5c5c5;
+}
+
+.potfolio__topics_item:hover>a {
+    color: #c5c5c5;
 }
