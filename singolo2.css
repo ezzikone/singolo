@@ -203,3 +203,9 @@ body>section>ul {
 .potfolio__topics_item:hover>a {
     color: #c5c5c5;
 }
+
+.item__social>img:hover {
+    background: #cccce4;
+    border: 0.01rem solid white;
+    border-radius: 50%;
+}
