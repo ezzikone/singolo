@@ -30,3 +30,32 @@ body {                              //footer
     margin: 0;
 }
 
+.footer__quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 6.7rem 4rem;
+    height: 64.8rem;
+    background: #f06c64;
+    border-bottom: .6rem solid #ea676b;
+}
+
+.quote__header {
+    font: 3rem "Lato-Black", sans-serif;
+    color: #f0d8d9;
+}
+
+.quote__description {
+    font: 1.8rem "Lato-Light", sans-serif;
+    color: #f0d8d9;
+}
+
+.quote__container {
+    display: inline-flex;
+    
+}
+
+.footer__bottom {
+    height: 7.6rem;
+    background: #2d303a;
+}
