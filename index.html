@@ -4,32 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="style.css">
-    <title>singolo1</title>
+    <script src="script.js" defer></script>
+    <title>singolo</title>
 </head>
 <body>
 <header class="header-singolo">
     <span class="header-logo">SINGOLO<p>*</p></span>
     <ul class="header-nav">
-        <li class="header-nav-li"><a href="">HOME</a></li>
+        <li class="header-nav-li header-nav-home header-nav-li-selected">HOME</li>
         <li class="header-nav-dot"></li>
-        <li class="header-nav-li"><a href="">SERVICES</a></li>
+        <li class="header-nav-li header-nav-services">SERVICES</li>
         <li class="header-nav-dot"></li>
-        <li class="header-nav-li"><a href="">PORTFOLIO</a></li>
+        <li class="header-nav-li header-nav-portfolio">PORTFOLIO</li>
         <li class="header-nav-dot"></li>
-        <li class="header-nav-li"><a href="">ABOUT</a></li>
+        <li class="header-nav-li header-nav-about">ABOUT</li>
         <li class="header-nav-dot"></li>
-        <li class="header-nav-li"><a href="">CONTACT</a></li>
+        <li class="header-nav-li header-nav-contact">CONTACT</li>
     </ul>
 </header>
-<section class="slider-singolo">
-    <img src="assets/header/arrow.png" alt="" class="slider-arrow-left">
-    <div class="slider-container">
-        <img src="assets/header/phone-vertical.png" alt="" class="slider-phone-vert">
-        <img src="assets/header/phone-horisontal.png" alt="" class="slider-phone-hori">
+<section class="slider carousel" id="slider-section">
+    <div class="slider-content item-container" id="slides">
+        <div class="slide slide-1 item">
+            <div class="all-phone">
+                <img src="./assets/img/Screen1.png" class="slider__img img-one" id="slider__img-one">
+                <img src="./assets/img/Screen2.png" class="slider__img img-two" id="slider__img-two">
+                <img src="./assets/img/Home-Button.png" class="slider__button button-one" onclick="delWallpaperOne()">
+                <img src="./assets/img/Home-Button.png" class="slider__button button-two" onclick="delWallpaperTwo()">
+                <img src="./assets/img/Cam.png" class="slider__phone phone-one">
+                <img src="./assets/img/Shadow.png" class="slider__shadow shadow-one">
+                <img src="./assets/img/Cam.png" class="slider__phone phone-two">
+                <img src="./assets/img/Shadow.png" class="slider__shadow shadow-two">
+            </div>
+        </div>
+        <div class="slide slide-2 blue item active">
+            <div class="all-phone">
+                <img class="blue" src="./assets/img/slide_2.png">
+            </div>
+        </div>
     </div>
-    <img src="assets/header/arrow.png" alt="" class="slider-arrow-right">
+    <div class="arrows">
+        <img src="./assets/img/svg/arrow-left.svg" class="slider__arrow arrow-left arrow left">
+        <img src="./assets/img/svg/arrow-right.svg" class="slider__arrow arrow-right arrow right">
+    </div>
+
 </section>
-<section class="services-singolo">
+<section class="services-singolo" id="SERVICES">
     <h1 class="services-header">Our Services</h1>
     <p class="services-description">Fusce dapibus, tellus ac cursus commodo,
         tortor mauris condimentum. Duis mollis, non
@@ -76,21 +95,21 @@
     </ul>
 </section>
 <main>
-    <section class="singolo__portfolio">
+    <section class="singolo__portfolio" id="PORTFOLIO">
         <h2 class="portfolio__header">Portfolio</h2>
         <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
         <ul class="portfolio__topics">
-            <li class="potfolio__topics_item">
-                <a href="">All</a>
+            <li class="potfolio__topics_item portfolio__topics_item_selected">
+                All
             </li>
             <li class="potfolio__topics_item">
-                <a href="">Web Design</a>
+                Web Design
             </li>
             <li class="potfolio__topics_item">
-                <a href="">Graphic Design</a>
+                Graphic Design
             </li>
             <li class="potfolio__topics_item">
-                <a href="">Artwork</a>
+                Artwork
             </li>
         </ul>
         <ul class="portfolio__items">
@@ -106,18 +125,9 @@
             <li class="portfolio__item"><img src="assets/main/10.png" alt=""></li>
             <li class="portfolio__item"><img src="assets/main/11.png" alt=""></li>
             <li class="portfolio__item"><img src="assets/main/12.png" alt=""></li>
-            <li class="portfolio__item"><img src="assets/main/12.png" alt=""></li>
-
-            <!--проверка условий-->
-
-            <li class="portfolio__item"><img src="assets/main/12.png" alt=""></li>
-            <li class="portfolio__item"><img src="assets/main/12.png" alt=""></li>
-            <li class="portfolio__item"><img src="assets/main/12.png" alt=""></li>
-            <li class="portfolio__item"><img src="assets/main/12.png" alt=""></li>
-            <li class="portfolio__item"><img src="assets/main/12.png" alt=""></li>
         </ul>
     </section>
-    <section class="singolo__about">
+    <section class="singolo__about" id="ABOUT">
         <h2 class="about__header">About Us</h2>
         <p class="about__description">Fusce dapibus, tellus ac cursus commodo,
             tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat
@@ -161,7 +171,7 @@
     </section>
 </main>
 <footer>
-    <section class="footer__quote">
+    <section class="footer__quote" id="CONTACT">
         <h3 class="quote__header">Get a Quote</h3>
         <p class="quote__description">
             Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -171,11 +181,11 @@
         </p>
         <div class="quote__container">
             <form action="" class="quote__container_form">
-                <input id="quote__name" name="quote__name" type="text" value="Name (Required)" required>
-                <input id="quote__email" name="quote__email" type="email" value="Email (Required)" required>
-                <input id="quote__subject" name="quote__subject" type="text" value="Subject">
-                <textarea name="quote__describe" id="quote__describe" cols="30" rows="12">Describe your project in detail...</textarea>
-                <input class="quote__submit" type="submit" value="Submit">
+                <input id="quote__name" name="quote__name" type="text" placeholder="Name (Required)" required>
+                <input id="quote__email" name="quote__email" type="email" placeholder="Email (Required)" required>
+                <input id="quote__subject" name="quote__subject" type="text" placeholder="Subject">
+                <textarea name="quote__describe" id="quote__describe" cols="30" rows="12" placeholder="Describe your project in detail..."></textarea>
+                <input class="quote__submit" type="submit" placeholder="Submit">
             </form>
             <article class="quote__article">
                 <h5 class="article__header">Contact Information</h5>

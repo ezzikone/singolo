@@ -30,6 +30,8 @@ body {
 }
 
 header {
+    position: fixed;
+    width: 963px;
     height: 90px;
     display: flex;
     justify-content: space-between;
@@ -37,6 +39,7 @@ header {
     padding: 0 17px 0 40px;
     background: #2d303a;
     border-bottom: 6px solid #323746;
+    z-index: 100;
 }
 
 .header-logo {
@@ -62,26 +65,27 @@ header {
 }
 
 .header-nav-li {
-    color: #494e62;
     list-style-type: none;
-}
-
-.header-nav-li a {
+    cursor: pointer;
     font: 12px "Lato-Bold", sans-serif;
     color: #FFFFFF;
     text-decoration: none;
+    animation: 0.5s ease-in-out;
 }
 
-.header-nav-li:first-child a {
+.header-nav-li:hover {
     color: #f06c64;
 }
 
-.header-nav-li:hover a {
+.header-nav-li:active {
+    color: #c7c8c7;
+}
+
+.header-nav-li-selected {
     color: #f06c64;
 }
 
 .header-nav-dot {
-    margin-top: 6px;
     width: 2px;
     height: 2px;
     list-style-type: none;
@@ -91,26 +95,25 @@ header {
 
 .slider-singolo {
     width: 100%;
+    padding-top: 93px;
     height: 594px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: #f06c64;
-    border-bottom: 6px solid #ea676b;
 }
 
 .slider-arrow-left {
-    position: relative;
-    bottom: 4px;
-    left: 11px;
+    position: absolute;
+    left: 25%;
+    z-index: 20;
     filter: alpha(Opacity=50); /* Полупрозрачность для IE */
     opacity: 0.5; /* Полупрозрачность для других браузеров */
 }
 
 .slider-arrow-right {
-    position: relative;
-    right: 8px;
-    bottom: 4px;
+    position: absolute;
+    right: 25%;
+    z-index: 20;
     transform: rotate(180deg);
     filter: alpha(Opacity=50); /* Полупрозрачность для IE */
     opacity: 0.5; /* Полупрозрачность для других браузеров */
@@ -124,21 +127,213 @@ header {
 
 .slider-container {
     position: relative;
-    bottom: 4px;
-    left: 1px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
     display: flex;
     align-items: center;
 }
 
-.slider-phone-vert {
-    width: 240px;
-    height: 483px;
-    margin-right: 73px;
+.slider {
+    height: 600px;
+    background-color: #f06c64;
+
+    padding-top: 95px;
+    user-select: none;
 }
 
-.slider-phone-hori {
-    width: 484px;
-    height: 240px;
+.slider-content {
+    position: relative;
+    /* width: 1020px; */
+    width: 100%;
+    height: inherit;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.none {
+    filter: brightness(0) opacity(1) drop-shadow(0 0 0 rgb(0, 0, 0));
+}
+
+.all-phone {
+    width: 1020px;
+    height: 594px;
+    position: relative;
+    margin: auto;
+}
+
+.slide {
+    width: 100%;
+    height: 594px;
+}
+
+.slide-2 img {
+    padding-top: 53px;
+    display: block;
+    margin: 0 auto;
+}
+
+.slide-1 {
+    background-color: #f06c64;
+    position: absolute;
+    border-bottom: 6px solid #ea676b;
+}
+
+.slide-2 {
+    background-color: #648BF0;
+    position: absolute;
+    border-bottom: 6px solid rgb(83, 121, 216);
+}
+
+.slider__phone {
+    position: absolute;
+    z-index: 1;
+}
+
+.phone-one {
+    top: 53px;
+    left: 112px;
+}
+
+.button-one {
+    position: absolute;
+    left: 198px;
+    top: 460px;
+    z-index: 2;
+}
+
+.slider__button:hover {
+    cursor: pointer;
+}
+
+.button-two {
+    position: absolute;
+    left: 433px;
+    top: 260px;
+    z-index: 2;
+}
+
+.phone-two {
+    transform: rotate(90deg);
+    top: 52px;
+    right: 258px;
+}
+
+.slider__shadow {
+    opacity: 0.15;
+    position: absolute;
+}
+
+.shadow-one {
+    top: 53px;
+    right: 668px;
+}
+
+.shadow-two {
+    transform: scale(1, -1) rotate(90deg);
+    top: 53px;
+    right: 233px;
+}
+
+.slider__img {
+    position: absolute;
+    z-index: 2;
+}
+
+.img-one {
+    top: 115px;
+    left: 123px;
+}
+
+.img-two {
+    top: 185px;
+    right: 199px;
+}
+
+.arrows {
+    width: 1020px;
+    top: -50%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.slider__arrow {
+    position: absolute;
+    z-index: 5;
+    width: 16px;
+    cursor: pointer;
+}
+
+.arrow-left {
+    left: 0px;
+}
+
+.arrow-right {
+    right: 0px;
+}
+
+
+@keyframes left {
+    from {
+        left: 0;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes right {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+.item {
+    display: none;
+    margin: 0 auto;
+    animation: 0.5s ease-in-out;
+}
+
+.item.active {
+    display: block;
+}
+
+.item-container {
+    overflow: hidden;
+}
+
+.active,
+.next {
+    display: block;
+}
+
+.next {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.to-left {
+    animation-name: left;
+}
+
+.to-right {
+    animation-name: right;
+    animation-direction: reverse;
+}
+
+.from-left {
+    animation-name: left;
+    animation-direction: reverse;
+}
+
+.from-right {
+    animation-name: right;
 }
 
 .services-singolo {
@@ -256,21 +451,20 @@ body>section>ul {
     border-radius: 4px;
     padding: 6px;
     color: #666d89;
+    text-decoration: none;
+    font-family: Lato, serif;
+    font-size: 12px;
 }
 
-.potfolio__topics_item:first-child {
+.portfolio__topics_item_selected {
+    color: #c5c5c5;
     border-color: #c5c5c5;
 }
 
-.potfolio__topics_item:first-child>a {
+.potfolio__topics_item:hover {
     color: #c5c5c5;
-}
-
-.potfolio__topics_item>a {
-    text-decoration: none;
-    font-family: Lato, serif;
-    color: #666d89;
-    font-size: 12px;
+    border-color: #c5c5c5;
+    cursor: pointer;
 }
 
 .portfolio__items {
@@ -285,6 +479,13 @@ body>section>ul {
 .portfolio__item{
     margin: 8px 0;
     list-style-type: none;
+    cursor: pointer;
+}
+
+.portfolio__item_selected {
+    border: 5px solid #f0e897;
+    box-sizing: border-box;
+    transition: 0.1s ease;
 }
 
 .portfolio__item:nth-child(n+13) {
@@ -368,14 +569,6 @@ body>section>ul {
     margin-left: 0;
 }
 
-.potfolio__topics_item:hover {
-    border-color: #c5c5c5;
-}
-
-.potfolio__topics_item:hover>a {
-    color: #c5c5c5;
-}
-
 .item__social>img:hover {
     background: #cccce4;
     border: 0.1px solid white;
@@ -425,6 +618,12 @@ body>section>ul {
     border: 0.001px solid;
     border-radius: 6px;
     background: #d6564f;
+    color: #f48c8f;
+    font: 12px "Lato", sans-serif;
+}
+
+.quote__container_form input::placeholder,
+.quote__container_form textarea::placeholder {
     color: #f48c8f;
     font: 12px "Lato", sans-serif;
 }
